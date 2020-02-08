@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    image: server
+    container_name: mysite5
+    ports:
+      - 5000:8000
+    volumes:
+      - ./:/app
+
+# docker image build --tag server .
+# docker container run --name mysite5 -p 5000:8000 -v ./:/app server
